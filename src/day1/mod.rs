@@ -29,8 +29,7 @@ pub(crate) fn solve() {
     for (i, num) in NUM_STRS.iter().enumerate() {
         input = input.replace(*num, NUM_REP_STRS[i]);
     }
-    println!("{}", input);
-
+    
     let mut sum: i32 = 0;
     for line in input.split("\n") {
         let mut most_recent_num: Option<u8> = None;
@@ -44,5 +43,5 @@ pub(crate) fn solve() {
         }
         sum += (most_recent_num.unwrap_or(0) as i32);
     }
-    println!("{}", sum);
+    println!("Day 1 Solution: {}", sum);
 }
